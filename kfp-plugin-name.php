@@ -4,7 +4,7 @@
  * Plugin Name
  *
  * @category Categoría
- * @package  KFP Plugin Name
+ * @package  kfp_plugin_name
  * @author   Juanan Ruiz <kungfupress@gmail.com>
  * @license  GPLv2 http://www.gnu.org/licenses/gpl-2.0.txt
  * @link     https://github.com/kungfupress/plugin-name
@@ -18,3 +18,8 @@
  * Author URI:   https://kungfupress.com/
  * PHP Version:  5.6
  */
+
+define( 'KFP_PLUGIN_NAME_DIR', plugin_dir_path( __FILE__ ) );
+$default_headers = array( 'Version' => 'Version' );
+$plugin_data     = get_file_data( __FILE__, $default_headers, 'plugin' );
+define( 'KFP_PLUGIN_NAME_VERSION', $plugin_data['Version'] );
