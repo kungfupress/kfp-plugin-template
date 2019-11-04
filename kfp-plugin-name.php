@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Plugin Name
  *
@@ -13,20 +12,21 @@
  * Plugin Name:  KFP Plugin Name
  * Plugin URI:   https://github.com/kungfupress/plugin-name
  * Description:  Descripción del plugin.
- * Version:      0.0.1
+ * Version:      0.0.2
  * Author:       Juanan Ruiz
  * Author URI:   https://kungfupress.com/
  * PHP Version:  5.6
  */
 
-if ( ! defined( 'KFP_PLUGIN_NAME_DIR' ) ) {
-	define( 'KFP_PLUGIN_NAME_DIR', plugin_dir_path( __FILE__ ) );
-}
-if ( ! defined( 'KFP_PLUGIN_NAME_URL' ) ) {
-	define( 'KFP_PLUGIN_NAME_URL', plugin_dir_url( __FILE__ ) );
-}
+defined( 'ABSPATH' ) || die();
+
+// Constantes que afectan a todos los ficheros del plugin.
+define( 'KFP_PLUGIN_NAME_DIR', plugin_dir_path( __FILE__ ) );
+define( 'KFP_PLUGIN_NAME_URL', plugin_dir_url( __FILE__ ) );
+define( 'KFP_PLUGIN_NAME_PLUGIN_FILE' );
 $default_headers = array( 'Version' => 'Version' );
 $plugin_data     = get_file_data( __FILE__, $default_headers, 'plugin' );
-if ( ! defined( 'KFP_PLUGIN_NAME_VERSION' ) ){
-	define( 'KFP_PLUGIN_NAME_VERSION', $plugin_data['Version'] );
-}
+define( 'KFP_PLUGIN_NAME_VERSION', $plugin_data['Version'] );
+
+// Activación del plugin.
+require_once KFP_PLUGIN_NAME_DIR . 'include/activate.php';
