@@ -19,7 +19,14 @@
  * PHP Version:  5.6
  */
 
-define( 'KFP_PLUGIN_NAME_DIR', plugin_dir_path( __FILE__ ) );
+if ( ! defined( 'KFP_PLUGIN_NAME_DIR' ) ) {
+	define( 'KFP_PLUGIN_NAME_DIR', plugin_dir_path( __FILE__ ) );
+}
+if ( ! defined( 'KFP_PLUGIN_NAME_URL' ) ) {
+	define( 'KFP_PLUGIN_NAME_URL', plugin_dir_url( __FILE__ ) );
+}
 $default_headers = array( 'Version' => 'Version' );
 $plugin_data     = get_file_data( __FILE__, $default_headers, 'plugin' );
-define( 'KFP_PLUGIN_NAME_VERSION', $plugin_data['Version'] );
+if ( ! defined( 'KFP_PLUGIN_NAME_VERSION' ) ){
+	define( 'KFP_PLUGIN_NAME_VERSION', $plugin_data['Version'] );
+}
