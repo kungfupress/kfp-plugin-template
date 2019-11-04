@@ -14,5 +14,5 @@ defined( 'ABSPATH' ) || die();
  */
 function kfp_plugin_name_activate() {
 	// Guarda o actualiza la versión del plugin en las option de WordPress.
-	update_option( 'kfp_plugin_name_plugin_version', KFP_PLUGIN_NAME_VERSION );
+	update_option( 'kfp_plugin_name_version', KFP_PLUGIN_NAME_VERSION );
 }
