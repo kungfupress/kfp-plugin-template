@@ -30,3 +30,5 @@ define( 'KFP_PLUGIN_NAME_VERSION', $plugin_data['Version'] );
 
 // Activación del plugin.
 require_once KFP_PLUGIN_NAME_DIR . 'include/activate.php';
+// Inicializa el plugin.
+require_once KFP_PLUGIN_NAME_DIR . 'include/plugin-init.php';
