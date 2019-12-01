@@ -1,16 +1,16 @@
 <?php
 /**
- * Plugin Name
+ * KFP Plugin Name
  *
  * @category Categoría
  * @package  kfp_plugin_name
  * @author   Juanan Ruiz <kungfupress@gmail.com>
  * @license  GPLv2 http://www.gnu.org/licenses/gpl-2.0.txt
- * @link     https://github.com/kungfupress/plugin-name
+ * @link     https://github.com/kungfupress/kfp-plugin-name
  *
  * @wordpress-plugin
  * Plugin Name:  KFP Plugin Name
- * Plugin URI:   https://github.com/kungfupress/plugin-name
+ * Plugin URI:   https://github.com/kungfupress/kfp-plugin-name
  * Description:  Descripción del plugin.
  * Version:      0.0.2
  * Author:       Juanan Ruiz
