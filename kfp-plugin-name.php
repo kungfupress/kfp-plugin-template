@@ -23,7 +23,6 @@ defined( 'ABSPATH' ) || die();
 // Constantes que afectan a todos los ficheros del plugin.
 define( 'KFP_PLUGIN_NAME_DIR', plugin_dir_path( __FILE__ ) );
 define( 'KFP_PLUGIN_NAME_URL', plugin_dir_url( __FILE__ ) );
-define( 'KFP_PLUGIN_NAME_PLUGIN_FILE' );
 $default_headers = array( 'Version' => 'Version' );
 $plugin_data     = get_file_data( __FILE__, $default_headers, 'plugin' );
 define( 'KFP_PLUGIN_NAME_VERSION', $plugin_data['Version'] );
