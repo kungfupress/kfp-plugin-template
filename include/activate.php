@@ -19,7 +19,7 @@ register_activation_hook( KFP_PLUGIN_NAME_PLUGIN_FILE, 'kfp_plugin_name_create_o
 function kfp_plugin_name_activate() {
 	// Graba o actualiza la versión del plugin en las option de WordPress.
 	update_option( 'kfp_plugin_name_plugin_version', KFP_PLUGIN_NAME_VERSION );
-	// Utiliza un array para contener el resto de opciones si son sencillas
+	// Utiliza un array para contener el resto de opciones si son sencillas.
 	$kfp_plugin_name_options = array(
 		'el_mejor_plugin_del_mundo' => true,
 	);
@@ -28,9 +28,10 @@ function kfp_plugin_name_activate() {
 
 register_activation_hook( KFP_PLUGIN_NAME_PLUGIN_FILE, 'kfp_plugin_name_create_custom_tables' );
 /**
-* Crea tablas personalizadas si son necesarias
-*
-*/
+ * Crea tablas personalizadas si son necesarias
+ *
+ * @return void
+ */
 function kfp_plugin_name_create_custom_tables() {
 	global $wpdb;
 	$sql             = array();
@@ -38,9 +39,9 @@ function kfp_plugin_name_create_custom_tables() {
 	$tabla_2         = $wpdb->prefix . 'tabla_2';
 	$charset_collate = $wpdb->get_charset_collate();
 
-	// Consultas para crear las tablas
-	// Si la tabla ya existe no la crea sino que la
-	// modifica con los posibles cambios y sin pérdida de datos.
+	// Consultas para crear las tablas:
+	// si la tabla ya existe no la crea sino que la modifica
+	// con los posibles cambios y sin pérdida de datos.
 	$sql[] = "
 		CREATE TABLE $tabla_1 (
         		id mediumint(9) NOT NULL AUTO_INCREMENT,
@@ -55,7 +56,7 @@ function kfp_plugin_name_create_custom_tables() {
 			PRIMARY KEY (id)
         	) $charset_collate
 		";
-	
-	include_once ABSPATH . 'wp-admin/includes/upgrade.php';
+
+		include_once ABSPATH . 'wp-admin/includes/upgrade.php';
 	dbDelta( $sql );
 }
